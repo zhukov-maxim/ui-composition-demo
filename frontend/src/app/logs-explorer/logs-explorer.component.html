@@ -7,9 +7,7 @@
   </div>
   <div class="body">
     <div class="navigation">
-      <p *ngIf="filesListState === dataLoadingState.Loading">
-        Loading file list...
-      </p>
+      <z-spinner *ngIf="filesListState === dataLoadingState.Loading"></z-spinner>
       <div *ngIf="filesListState === dataLoadingState.Loaded">
         <ul>
           <li
@@ -25,9 +23,7 @@
       <p *ngIf="fileContentState === dataLoadingState.Initial">
         Please select a file.
       </p>
-      <p *ngIf="fileContentState === dataLoadingState.Loading">
-        Loading file content...
-      </p>
+      <z-spinner *ngIf="fileContentState === dataLoadingState.Loading"></z-spinner>
       <p *ngIf="fileContentState === dataLoadingState.Loaded">
         {{fileContent?.log}}
       </p>

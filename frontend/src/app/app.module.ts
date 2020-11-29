@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogsExplorerComponent } from './logs-explorer/logs-explorer.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LogsExplorerComponent
+    LogsExplorerComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
