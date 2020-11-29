@@ -8,8 +8,12 @@ const log20201127 = require('./demo-responses/2020-11-27.json');
 
 const app = express();
 const port = 4201;
+const responseDelay = 2000;
 
 app.use(cors());
+app.use(function(req, res, next) {
+    setTimeout(next, responseDelay);
+});
 
 app.get('/', (req, res) => res.send('Logs API'));
 app.get('/dates', (req, res) => res.send(dates));
