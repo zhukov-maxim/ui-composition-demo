@@ -1,0 +1,36 @@
+<div
+  [ngStyle]="style"
+  class="logs-explorer"
+>
+  <div class="header">
+    Logs Explorer
+  </div>
+  <div class="body">
+    <div class="navigation">
+      <p *ngIf="filesListState === dataLoadingState.Loading">
+        Loading file list...
+      </p>
+      <div *ngIf="filesListState === dataLoadingState.Loaded">
+        <ul>
+          <li
+            *ngFor="let fileName of filesList"
+            [ngStyle]="{'fontWeight': fileName === selectedFileName ? 'bold' : 'normal'}"
+          >
+            {{fileName}}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <p *ngIf="fileContentState === dataLoadingState.Initial">
+        Please select a file.
+      </p>
+      <p *ngIf="fileContentState === dataLoadingState.Loading">
+        Loading file content...
+      </p>
+      <p *ngIf="fileContentState === dataLoadingState.Loaded">
+        {{fileContent?.log}}
+      </p>
+    </div>
+  </div>
+</div>
