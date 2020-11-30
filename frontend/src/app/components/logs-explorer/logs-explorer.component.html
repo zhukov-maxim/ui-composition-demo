@@ -24,9 +24,17 @@
         Please select a file.
       </p>
       <z-spinner *ngIf="fileContentState === dataLoadingState.Loading"></z-spinner>
-      <p *ngIf="fileContentState === dataLoadingState.Loaded">
+      <div
+        *ngIf="fileContentState === dataLoadingState.Loaded"
+        class="controls"
+      >
+        <button type="button" (click)="downloadSelectedFile()">
+          Download
+        </button>
+      </div>
+      <div *ngIf="fileContentState === dataLoadingState.Loaded">
         {{fileContent?.log}}
-      </p>
+      </div>
     </div>
   </div>
 </div>

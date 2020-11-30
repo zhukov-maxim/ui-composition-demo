@@ -73,4 +73,8 @@ export class LogsExplorerComponent implements OnInit {
       height: this.height
     };
   }
+
+  downloadSelectedFile(): void {
+    alert('File save dialog.');
+  }
 }
