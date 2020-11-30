@@ -20,9 +20,9 @@
       </div>
     </div>
     <div class="content">
-      <p *ngIf="fileContentState === dataLoadingState.Initial">
+      <z-info-box *ngIf="fileContentState === dataLoadingState.Initial">
         Please select a file.
-      </p>
+      </z-info-box>
       <z-spinner *ngIf="fileContentState === dataLoadingState.Loading"></z-spinner>
       <div
         *ngIf="fileContentState === dataLoadingState.Loaded"

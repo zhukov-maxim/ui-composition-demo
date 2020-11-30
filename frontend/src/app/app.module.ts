@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { LogsExplorerComponent } from './components/logs-explorer/logs-explorer.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { InfoBoxComponent } from './info-box/info-box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogsExplorerComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    InfoBoxComponent
   ],
   imports: [
     BrowserModule,
