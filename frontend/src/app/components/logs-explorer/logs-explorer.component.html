@@ -20,17 +20,12 @@
         Please select a file.
       </z-info-box>
       <z-spinner *ngIf="fileContentState === dataLoadingState.Loading"></z-spinner>
-      <div
+      <z-file-preview
         *ngIf="fileContentState === dataLoadingState.Loaded"
-        class="controls"
+        [fileContent]="fileContent"
+        (downloadClick)="downloadSelectedFile($event)"
       >
-        <button type="button" (click)="downloadSelectedFile()">
-          Download
-        </button>
-      </div>
-      <div *ngIf="fileContentState === dataLoadingState.Loaded">
-        {{fileContent?.log}}
-      </div>
+      </z-file-preview>
     </div>
   </div>
 </div>

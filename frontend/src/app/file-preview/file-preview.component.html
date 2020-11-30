@@ -1,0 +1,23 @@
+<div>
+  <div class="controls">
+    <button
+      type="button"
+      (click)="onDownloadClick()"
+    >
+      Download
+    </button>
+  </div>
+  <div *ngIf="!fileContent">
+    <z-info-box>
+      File is empty.
+    </z-info-box>
+  </div>
+  <div *ngIf="fileContent">
+    <h3>
+      {{fileContent.date}}
+    </h3>
+    <p>
+      {{fileContent.log}}
+    </p>
+  </div>
+</div>

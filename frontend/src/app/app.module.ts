@@ -8,6 +8,7 @@ import { LogsExplorerComponent } from './components/logs-explorer/logs-explorer.
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { InfoBoxComponent } from './info-box/info-box.component';
 import { ListComponent } from './list/list.component';
+import { FilePreviewComponent } from './file-preview/file-preview.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ListComponent } from './list/list.component';
     LogsExplorerComponent,
     SpinnerComponent,
     InfoBoxComponent,
-    ListComponent
+    ListComponent,
+    FilePreviewComponent
   ],
   imports: [
     BrowserModule,
