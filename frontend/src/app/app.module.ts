@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { LogsExplorerComponent } from './logs-explorer/logs-explorer.component';
-import { SpinnerComponent } from './spinner/spinner.component';
+import { AppComponent } from './components/app/app.component';
+import { LogsExplorerComponent } from './components/logs-explorer/logs-explorer.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [

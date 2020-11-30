@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { FileContent, LogsService } from '../logs.service';
+import { FileContent, LogsService } from '../../services/logs/logs.service';
 
 enum DataLoadingState {
   Initial,
