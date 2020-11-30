@@ -8,16 +8,12 @@
   <div class="body">
     <div class="navigation">
       <z-spinner *ngIf="filesListState === dataLoadingState.Loading"></z-spinner>
-      <div *ngIf="filesListState === dataLoadingState.Loaded">
-        <ul>
-          <li
-            *ngFor="let fileName of filesList"
-            [ngStyle]="{'fontWeight': fileName === selectedFileName ? 'bold' : 'normal'}"
-          >
-            {{fileName}}
-          </li>
-        </ul>
-      </div>
+      <z-list
+        *ngIf="filesListState === dataLoadingState.Loaded"
+        [items]="filesList"
+        [selectedItem]="selectedFileName"
+      >
+      </z-list>
     </div>
     <div class="content">
       <z-info-box *ngIf="fileContentState === dataLoadingState.Initial">

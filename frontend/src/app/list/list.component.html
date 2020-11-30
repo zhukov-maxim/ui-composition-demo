@@ -1,0 +1,8 @@
+<ul>
+  <li
+    *ngFor="let item of items"
+    [ngStyle]="getItemStyle(item)"
+  >
+    {{item}}
+  </li>
+</ul>
